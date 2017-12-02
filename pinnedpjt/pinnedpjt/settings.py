@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_DIRS = (os.path.join('pinnedapp', 'templates'),)
+
 WSGI_APPLICATION = 'pinnedpjt.wsgi.application'
 
 

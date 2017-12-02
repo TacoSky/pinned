@@ -8,4 +8,5 @@ from django.http import HttpResponse
 
 def toppage(request):
     """トップページ"""
-    return HttpResponse('トップページ')
+    #return HttpResponse('トップページ')
+    return render(request,'toppage.html')
