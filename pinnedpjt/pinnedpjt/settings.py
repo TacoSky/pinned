@@ -56,7 +56,7 @@ ROOT_URLCONF = 'pinnedpjt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['pinnedapp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-TEMPLATE_DIRS = (os.path.join('pinnedapp', 'templates'),)
+#TEMPLATE_DIRS = (os.path.join('pinnedapp', 'templates'),)
 
 WSGI_APPLICATION = 'pinnedpjt.wsgi.application'
 
