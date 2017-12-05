@@ -1,0 +1,26 @@
+
+
+.flex-row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction:         row;
+}
+.flex-row-reverse {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    flex-direction:         row-reverse;
+}
+.flex-column {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction:         column;
+}
+.flex-column-reverse {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    flex-direction:         column-reverse;
+}
