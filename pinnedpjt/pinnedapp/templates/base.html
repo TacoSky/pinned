@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <title>{% block title %}PINNED{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="{% static 'css/materialize.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'css/pinned.css' %}" rel="stylesheet">
+
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/materialize.min.js' %}"></script>
+
+    {% load compress %}
+    {% compress js %}
     <script src="{% static 'js/pinned.js' %}"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% endcompress %}
 
     {% block extrahead %}{% endblock %}
+
 </head>
 <body>
     <nav>

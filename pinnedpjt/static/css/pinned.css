@@ -1,5 +1,8 @@
-
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 .flex-row {
     display: -webkit-flex;
     display: flex;
@@ -23,4 +26,8 @@
     display: flex;
     -webkit-flex-direction: column-reverse;
     flex-direction:         column-reverse;
+}
+#map{
+    height: 100%;
+    width:100%;
 }
