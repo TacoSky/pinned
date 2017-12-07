@@ -135,5 +135,5 @@ STATICFILES_FINDERS = (
 )
 
 COMPRESS_PRECOMPILERS = (
-    ('text/es6+javascript', 'babel -o {outfile} {infile}'),
+    ('text/es6+javascript', 'npx babel {infile} -o {outfile}'),
 )
