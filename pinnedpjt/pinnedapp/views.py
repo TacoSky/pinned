@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponse
+from pinnedapp.models import PinnedLocation
 
 
 # Create your views here.
@@ -13,9 +14,14 @@ def toppage(request):
 
 def search(request):
     """検索トップ"""
-    if 0 != len(request.GET):
-        """print(request.GET.get(key="q", default="hogehoge"))"""
+    if 0 == len(request.GET):
         return render(request,'searchtop.html')
     else:
-        return render(request,'searchtop.html')
+        keyword = request.GET.get(key="key", default="")
+        reslist = PinnedLocation.objects.all().filter(name__contains=keyword)
+
+        return render(request,'searchtop.html', {
+            'reslist': reslist,
+        })
+
 
