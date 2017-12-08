@@ -7,6 +7,15 @@ from django.http import HttpResponse
 
 
 def toppage(request):
-    """トップページ"""
-    #return HttpResponse('トップページ')
-    return render(request,'toppage.html')
+    """トップページ ※テンポラリ"""
+    return render(request,'searchtop.html')
+
+
+def search(request):
+    """検索トップ"""
+    if 0 != len(request.GET):
+        """print(request.GET.get(key="q", default="hogehoge"))"""
+        return render(request,'searchtop.html')
+    else:
+        return render(request,'searchtop.html')
+

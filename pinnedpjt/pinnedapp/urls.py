@@ -4,5 +4,6 @@ from pinnedapp import views
 
 
 urlpatterns = [
-    url(r'^', views.toppage, name='home'),
+    url(r'^$', views.toppage, name='home'),
+    url(r'^search/$', views.search, name='search'),
 ]
