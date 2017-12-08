@@ -28,6 +28,13 @@ html, body {
     flex-direction:         column-reverse;
 }
 #map{
-    height: 100%;
+    height: auto;
     width:100%;
+}
+
+#gmnoprint{
+    visibility : hidden;
+}
+.gm-svpc{
+    visibility : hidden;
 }
