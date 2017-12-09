@@ -1,0 +1,17 @@
+{% extends "searchtop.html" %}
+
+{% block title %}トップページ{% endblock title %}
+
+{% block extrahead %}
+
+{% endblock %}
+
+{% block content %}
+    <div id="map"></div>
+    <script>
+        {% for result in reslist %}
+            dictPins.push(new PinnedLocation("{{ result.name }}", {{ result.lat }}, {{ result.lng }}));
+        {% endfor %}
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfVey6hHOG2QxJeH2fjEhqCgAAbeFksXE&callback=cbInitMap" async defer></script>
+{% endblock %}

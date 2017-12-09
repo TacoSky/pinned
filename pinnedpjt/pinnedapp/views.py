@@ -20,7 +20,7 @@ def search(request):
         keyword = request.GET.get(key="key", default="")
         reslist = PinnedLocation.objects.all().filter(name__contains=keyword)
 
-        return render(request,'searchtop.html', {
+        return render(request,'searchresult.html', {
             'reslist': reslist,
         })
 
