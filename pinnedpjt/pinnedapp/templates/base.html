@@ -22,39 +22,20 @@
 
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper blue darken-3 z-depth-3">
-            <div class="container">
-                <a href="#" class="brand-logo left">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-small-only">
-                    <form>
-                        <div class="flex-row">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search">
-                                <i class="material-icons">
-                                    search
-                                </i>
-                            </label>
-                            <!--<i class="material-icons">close</i>-->
-                        </div>
-                    </form>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div id="maincontainer">
-        <div id="mapcontainer" class={% block mapmode %}{% endblock %}>
+    {% include "elem/navi.html" %}
+
+    <div id="maincontainer" class="nav-wrapper grey lighten-3">
+        <div id="mapcontainer" class="{% block mapmode %}{% endblock %} z-depth-1">
             <div id="map"></div>
         </div>
-        <div id="listcontainrt" class={% block listmode %}{% endblock %}>
+        <div id="listcontainrt" class="{% block listmode %}{% endblock %} blue lighten-5 z-depth-1">
             {% block listcontent %}{% endblock %}
         </div>
     </div>
 
     {% block mapcontent %}{% endblock %}
 
-    <div class="foot-wrapper blue darken-3 z-depth-3">
-    </div>
+    {% include "elem/footer.html" %}
 </body>
 </html>
