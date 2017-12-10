@@ -6,7 +6,9 @@
 
 {% endblock %}
 
-{% block content %}
-    <div id="map"></div>
+{% block mapmode %}"searchtop"{% endblock %}
+{% block listmode %}"searchtop"{% endblock %}
+
+{% block mapcontent %}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfVey6hHOG2QxJeH2fjEhqCgAAbeFksXE&callback=cbInitMap" async defer></script>
 {% endblock %}

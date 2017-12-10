@@ -39,7 +39,10 @@ class MapView {
     adjust(){
         var hwin = $(window).height();
         var hnav = $('.nav-wrapper').height();
-        $("#"+this.divid).css('height', (hwin - hnav - 2) + "px"); //可変部分の高さを適用
+        var hfoot = $('.foot-wrapper').height();
+        $("#"+this.divid).css('height', (hwin - hnav - hfoot - 2) + "px");
+        $(".gm-svpc").css('visibility',"hidden")
+        $("#gmnoprint").css('visibility',"hidden")
     }
 }
 

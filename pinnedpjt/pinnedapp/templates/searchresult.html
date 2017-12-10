@@ -2,16 +2,29 @@
 
 {% block title %}トップページ{% endblock title %}
 
-{% block extrahead %}
+{% block extrahead %}{% endblock %}
 
-{% endblock %}
+{% block mapmode %}"searchresult"{% endblock %}
+{% block listmode %}"searchresult"{% endblock %}
 
-{% block content %}
-    <div id="map"></div>
+
+{% block mapcontent %}
     <script>
         {% for result in reslist %}
             dictPins.push(new PinnedLocation("{{ result.name }}", {{ result.lat }}, {{ result.lng }}));
         {% endfor %}
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfVey6hHOG2QxJeH2fjEhqCgAAbeFksXE&callback=cbInitMap" async defer></script>
+{% endblock %}
+
+
+{% block listcontent %}
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for result in reslist %}
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_location</i>{{ result.name }}</div>
+                <div class="collapsible-body"><span>testtesttesttesttesttesttesttest</span></div>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
