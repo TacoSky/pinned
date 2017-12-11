@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow:hidden;
 }
 body:before {
     content: "";
@@ -44,9 +45,10 @@ body:before {
 
 
 #maincontainer{
-    padding: 5px;
+    padding: 5px 0;
     z-index: 0;
     height: auto;
+    width:135%;
 
     display: -webkit-flex;
     display: flex;
@@ -54,23 +56,35 @@ body:before {
     flex-direction:         row;
 }
 #mapcontainer{
-    margin:2px;
+    margin:2px 0.3%;
+    min-width:49.4%;
 }
 #mapcontainer.searchtop{
-    width:100%;
+    width:73.4%;
 }
 #mapcontainer.searchresult{
-    width:70%;
+    animation-duration: 1s;
+	animation-name: slideinleft;
+    animation-fill-mode:forwards;
 }
-#listcontainrt{
-    margin:2px;
+@keyframes slideinleft {
+	from{
+        width:73.4%;
+    }
+	to	{
+		width:49.4%;
+    }
 }
-#listcontainrt.searchtop {
-    width:0;
+#listcontainer{
+    margin:2px 0.3%;
 }
-#listcontainrt.searchresult {
-    width:30%;
+#listcontainer.searchtop {
+    width:23.4%;
 }
+#listcontainer.searchresult {
+    width:23.4%;
+}
+
 
 
 
