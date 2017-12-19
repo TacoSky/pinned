@@ -42,8 +42,38 @@ body:before {
     -webkit-flex-direction: column-reverse;
     flex-direction:         column-reverse;
 }
+.flex-baseline {
+  -webkit-align-items: baseline;
+  align-items:         baseline;
+}
+.flex-center {
+  -webkit-align-items: center;
+  align-items:         center;
+}
 
+.naviarea{
+    height:60px;
+    width:100%;
+}
 
+.input-field{
+    margin:0px;
+}
+#input-keyword{
+    margin:0px;
+}
+#input-keyword:placeholder-shown{
+    background-color: #00acc1;
+}
+#input-keyword::-webkit-input-placeholder {
+background-color: #00acc1;
+
+}
+
+.footerarea{
+    height:60px;
+    width:100%;
+}
 #maincontainer{
     padding: 5px 0;
     z-index: 0;

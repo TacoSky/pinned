@@ -23,6 +23,8 @@ class MapView {
         this.map = new google.maps.Map(document.getElementById(id), {
             center: this.center,
             zoom: 8,
+            disableDefaultUI: true,
+            gestureHandling: "greedy",
         });
 
 
@@ -38,8 +40,8 @@ class MapView {
     }
     adjust(){
         var hwin = $(window).height();
-        var hnav = $('.nav-wrapper').height();
-        var hfoot = $('.foot-wrapper').height();
+        var hnav = $('.naviarea').height();
+        var hfoot = $('.footerarea').height();
         $("#"+this.divid).css('height', (hwin - hnav - hfoot - 2) + "px");
         $(".gm-svpc").css('visibility',"hidden")
         $("#gmnoprint").css('visibility',"hidden")
