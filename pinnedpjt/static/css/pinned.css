@@ -59,13 +59,13 @@ body:before {
 .input-field{
     margin:0px;
 }
-#input-keyword{
+#search-keyword{
     margin:0px;
 }
-#input-keyword:placeholder-shown{
+#search-keyword:placeholder-shown{
     background-color: #00acc1;
 }
-#input-keyword::-webkit-input-placeholder {
+#search-keyword::-webkit-input-placeholder {
 background-color: #00acc1;
 
 }

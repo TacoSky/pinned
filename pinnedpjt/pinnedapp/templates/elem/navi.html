@@ -3,8 +3,8 @@
     <a href="/" class="brand-logo left">Logo</a>
     <div class="navisearch right">
         <div class="input-field col s6 flex-row flex-center">
-            <input id="input-keyword" type="text" class="validate">
-            <i class="material-icons">search</i>
+            <input id="search-keyword" type="text" class="validate">
+            <i id="search-button" class="material-icons">search</i>
             <label for="input-keyword">search keyword</label>
         </div>
     </div>
@@ -26,3 +26,9 @@
     </div>
     -->
 </div>
+
+<script>
+    $("#search-button").on('click',function(){
+        window.location.href = '/search/?key='+$("#search-keyword").val();
+    });
+</script>

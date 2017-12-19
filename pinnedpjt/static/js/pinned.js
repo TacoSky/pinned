@@ -69,4 +69,3 @@ function cbInitMap(){
 $(window).on('resize', function(){
       ctrlMap.adjust();
 })
-
