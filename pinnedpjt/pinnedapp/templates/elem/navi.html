@@ -28,7 +28,9 @@
 </div>
 
 <script>
-    $("#search-button").on('click',function(){
-        window.location.href = '/search/?key='+$("#search-keyword").val();
+    $("#search-button").on('click',function() {
+        if ($("#search-keyword").val() != "") {
+            window.location.href = '/search/?key=' + $("#search-keyword").val();
+        }
     });
 </script>
