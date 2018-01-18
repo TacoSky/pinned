@@ -33,4 +33,15 @@
             window.location.href = '/search/?key=' + $("#search-keyword").val();
         }
     });
+    /*
+    $(function(){
+        $.pjax({
+            container: '#listcontainer',
+            link : '#search-button',
+            ajax : { timeout: 2500 }, //Ajax setting
+            wait : 500, //wait time after call ms
+            load : { script: false } //call inline script
+        });
+    });*/
+
 </script>
