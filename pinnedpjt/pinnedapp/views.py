@@ -25,3 +25,12 @@ def search(request):
         })
 
 
+def test01(request):
+    """トップページ ※テンポラリ"""
+    return render(request,'test01.html')
+
+
+def test02(request):
+    """トップページ ※テンポラリ"""
+    return render(request,'test02.html')
+

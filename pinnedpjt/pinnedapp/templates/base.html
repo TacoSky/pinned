@@ -11,10 +11,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'css/pinned.css' %}" rel="stylesheet">
 
+    <!--
     <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
-    <script src="{% static 'js/materialize.min.js' %}"></script>
     <script src="{% static 'js/jquery.pjax.js' %}"></script>
+    -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/static/js/jquery.pjax.falsandtru.min.js"></script>
 
+    <script src="{% static 'js/materialize.min.js' %}"></script>
     {% compress js %}
         <script type='text/es6+javascript'  src="{% static 'js/pinned.js' %}"></script>
     {% endcompress %}
